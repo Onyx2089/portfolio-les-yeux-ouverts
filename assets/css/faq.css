@@ -15,15 +15,10 @@
 	box-sizing: border-box;
 }
 
-html, body {
-	width: 100%;
-	height: 100%;
-}
-
 body {
 	font-family: 'Times New Roman', Times, serif;
-	background: #4B4139;
-	color: #EDE8D0;
+	background: #EDE8D0;
+	color: #4B4139;
 }
 
 /* -----------------------------------------------
@@ -41,7 +36,7 @@ body {
 	align-items: center;
 	column-gap: 3rem;
 	padding: 1.4rem 3rem;
-	background: rgba(75, 65, 57, 0.25);
+	background: rgba(34, 54, 49, 0.92);
 }
 
 .nav-left {
@@ -57,7 +52,7 @@ body {
 
 .nav-left a,
 .nav-right a {
-	color: rgba(237, 232, 208, 0.8);
+	color: rgba(237, 232, 208, 0.75);
 	text-decoration: none;
 	font-size: 0.68rem;
 	letter-spacing: 0.14em;
@@ -67,7 +62,9 @@ body {
 }
 
 .nav-left a:hover,
-.nav-right a:hover {
+.nav-right a:hover,
+.nav-left a.active,
+.nav-right a.active {
 	color: #EDE8D0;
 }
 
@@ -84,75 +81,189 @@ body {
    Hero
 ----------------------------------------------- */
 
-#hero {
-	position: relative;
-	width: 100%;
-	height: 100vh;
-	background: url('../../images/hero.jpeg') center center / cover no-repeat;
+#faq-hero {
+	background-color: #223631;
+	height: 28vh;
+	min-height: 180px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
+	padding-top: 80px;
 }
 
-#hero::before {
-	content: '';
-	position: absolute;
-	inset: 0;
-	background: rgba(75, 65, 57, 0.42);
-}
-
-.hero-content {
-	position: relative;
-	z-index: 1;
-	padding: 0 2rem;
-}
-
-.hero-subtitle {
-	font-size: 0.68rem;
-	letter-spacing: 0.28em;
-	font-weight: 300;
-	color: rgba(237, 232, 208, 0.75);
+.faq-hero-label {
+	font-size: 0.65rem;
+	letter-spacing: 0.3em;
 	text-transform: uppercase;
-	margin-bottom: 1.2rem;
+	color: rgba(237, 232, 208, 0.6);
+	margin-bottom: 0.8rem;
 }
 
-.hero-title {
-	text-transform: uppercase;
+.faq-hero-title {
 	font-family: 'Milk And Honey', cursive;
-	font-size: 6.5rem;
+	font-size: 4.5rem;
 	font-weight: 400;
 	color: #EDE8D0;
-	line-height: 1.1;
-	margin-bottom: 2rem;
+	line-height: 1;
 }
 
-.hero-description {
+/* -----------------------------------------------
+   FAQ content
+----------------------------------------------- */
+
+#faq-content {
+	max-width: 760px;
+	margin: 0 auto;
+	padding: 4rem 2rem 6rem;
+}
+
+.faq-intro {
+	text-align: center;
 	font-size: 0.82rem;
 	font-weight: 300;
 	line-height: 1.9;
-	color: rgba(237, 232, 208, 0.82);
-	max-width: 460px;
-	margin: 0 auto 2.4rem;
+	color: #777;
+	margin-bottom: 3rem;
 }
 
-.hero-btn {
+/* -----------------------------------------------
+   Accordion
+----------------------------------------------- */
+
+.accordion {
+	border-top: 1px solid #e4e0d8;
+}
+
+.accordion-item {
+	border-bottom: 1px solid #e4e0d8;
+}
+
+.accordion-btn {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 1.3rem 0;
+	text-align: left;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 0.82rem;
+	font-weight: 400;
+	color: #4B4139;
+	gap: 1rem;
+	transition: color 0.2s;
+}
+
+.accordion-btn:hover {
+	color: #223631;
+}
+
+.accordion-icon {
+	flex-shrink: 0;
+	font-size: 1.3rem;
+	font-weight: 300;
+	color: #223631;
+	line-height: 1;
+	transition: transform 0.3s;
+}
+
+.accordion-panel {
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.accordion-item.open .accordion-panel {
+	max-height: 400px;
+	padding-bottom: 1.3rem;
+}
+
+.accordion-panel p {
+	font-size: 0.8rem;
+	font-weight: 300;
+	line-height: 1.9;
+	color: #666;
+}
+
+/* -----------------------------------------------
+   CTA block
+----------------------------------------------- */
+
+.faq-cta {
+	margin-top: 4rem;
+	background: #223631;
+	padding: 3.5rem 3rem;
+	text-align: center;
+}
+
+.faq-cta-title {
+	font-family: 'Milk And Honey', cursive;
+	font-size: 2.8rem;
+	font-weight: 400;
+	color: #EDE8D0;
+	margin-bottom: 1rem;
+	line-height: 1.2;
+}
+
+.faq-cta-text {
+	font-size: 0.78rem;
+	font-weight: 300;
+	color: rgba(237, 232, 208, 0.75);
+	margin-bottom: 2rem;
+}
+
+.faq-cta-btn {
 	display: inline-block;
-	padding: 0.75rem 2.4rem;
-	border: 1px solid rgba(237, 232, 208, 0.65);
-	color: rgba(237, 232, 208, 0.88);
+	padding: 0.7rem 2.2rem;
+	border: 1px solid rgba(237, 232, 208, 0.6);
+	color: rgba(237, 232, 208, 0.9);
 	text-decoration: none;
 	font-size: 0.62rem;
 	letter-spacing: 0.2em;
-	font-weight: 400;
 	text-transform: uppercase;
+	font-weight: 400;
 	transition: background 0.3s, border-color 0.3s, color 0.3s;
 }
 
-.hero-btn:hover {
+.faq-cta-btn:hover {
 	background: rgba(237, 232, 208, 0.12);
 	border-color: #EDE8D0;
 	color: #EDE8D0;
+}
+
+/* -----------------------------------------------
+   Footer
+----------------------------------------------- */
+
+#footer {
+	background: #4B4139;
+	padding: 2.5rem 2rem;
+	text-align: center;
+}
+
+.footer-inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.footer-brand {
+	text-transform: uppercase;
+	font-family: 'Milk And Honey', cursive;
+	font-size: 2rem;
+	color: #EDE8D0;
+}
+
+.footer-tagline {
+	font-size: 0.6rem;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: rgba(237, 232, 208, 0.4);
+	font-weight: 300;
 }
 
 /* -----------------------------------------------
@@ -196,7 +307,7 @@ body {
 	display: none;
 	position: fixed;
 	inset: 0;
-	background: rgba(75, 65, 57, 0.93);
+	background: rgba(34, 54, 49, 0.97);
 	z-index: 150;
 	flex-direction: column;
 	align-items: center;
@@ -227,28 +338,7 @@ body {
    Responsive
 ----------------------------------------------- */
 
-@media (max-width: 900px) {
-	#navbar {
-		padding: 1.2rem 1.5rem;
-		gap: 1rem;
-	}
-
-	.nav-left,
-	.nav-right {
-		gap: 1.2rem;
-	}
-
-	.hero-title {
-	text-transform: uppercase;
-		font-size: 4.5rem;
-	}
-}
-
 @media (max-width: 620px) {
-	#hero {
-		background-image: url('../../images/hero-mobile.jpeg');
-	}
-
 	#navbar {
 		padding: 1rem 1.2rem;
 		column-gap: 0.5rem;
@@ -270,12 +360,19 @@ body {
 		justify-self: end;
 	}
 
-	.hero-title {
-	text-transform: uppercase;
+	.faq-hero-title {
 		font-size: 3.2rem;
 	}
 
-	.hero-description br {
+	.faq-intro br {
 		display: none;
+	}
+
+	.faq-cta {
+		padding: 2.5rem 1.5rem;
+	}
+
+	.faq-cta-title {
+		font-size: 2rem;
 	}
 }

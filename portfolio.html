@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<title>Portfolio - Les yeux ouverts</title>
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="assets/css/portfolio.css" />
+</head>
+<body>
+
+	<!-- Navigation -->
+	<nav id="navbar">
+		<ul class="nav-left">
+			<li><a href="index.html">Accueil</a></li>
+			<li><a href="a-propos.html">À propos de moi</a></li>
+			<li><a href="portfolio.html" class="active">Portfolio</a></li>
+		</ul>
+		<div class="nav-brand">
+			<a href="index.html"><em>Les yeux ouverts</em></a>
+		</div>
+		<ul class="nav-right">
+			<li><a href="tarifs.html">Tarifs</a></li>
+			<li><a href="faq.html">FAQ</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+		<button class="hamburger" id="hamburger" aria-label="Menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+	</nav>
+
+	<div id="nav-mobile">
+		<a href="index.html">Accueil</a>
+		<a href="a-propos.html">À propos de moi</a>
+		<a href="portfolio.html" class="active">Portfolio</a>
+		<a href="tarifs.html">Tarifs</a>
+		<a href="faq.html">FAQ</a>
+		<a href="contact.html">Contact</a>
+	</div>
+
+	<!-- Hero -->
+	<section id="portfolio-hero">
+		<div class="portfolio-hero-content">
+			<p class="portfolio-hero-label">Mon portfolio</p>
+			<h1 class="portfolio-hero-title">Portfolio</h1>
+		</div>
+	</section>
+
+	<!-- Filtres -->
+	<div id="filters">
+		<button class="filter-btn active" data-filter="tous">Tous</button>
+		<button class="filter-btn" data-filter="portraits">Portraits</button>
+		<button class="filter-btn" data-filter="couples">Couples</button>
+		<button class="filter-btn" data-filter="famille">Famille</button>
+		<button class="filter-btn" data-filter="enfants">Enfants</button>
+	</div>
+
+	<!-- Galerie -->
+	<section id="gallery">
+		<div class="masonry" id="masonry">
+
+			<!-- Famille -->
+			<div class="photo-item" data-category="famille">
+				<img src="images/portfolio/DSC00013.jpeg" alt="Famille au parc" loading="lazy" />
+			</div>
+			<div class="photo-item" data-category="famille">
+				<img src="images/portfolio/DSC00069.jpeg" alt="Famille autour d'un arbre" loading="lazy" />
+			</div>
+			<div class="photo-item" data-category="famille">
+				<img src="images/portfolio/DSC00702.jpeg" alt="Famille en forêt" loading="lazy" />
+			</div>
+			<div class="photo-item" data-category="famille">
+				<img src="images/portfolio/IMG_3418.jpeg" alt="Famille sur le terrain" loading="lazy" />
+			</div>
+			<div class="photo-item" data-category="enfants">
+				<img src="images/portfolio/IMG_3419.jpeg" alt="Deux frères" loading="lazy" />
+			</div>
+			<div class="photo-item" data-category="famille">
+				<img src="images/portfolio/IMG_3423.jpeg" alt="Mère et fils" loading="lazy" />
+			</div>
+			<div class="photo-item" data-category="famille">
+				<img src="images/portfolio/A6BC3CF0-CACD-4ADE-BC66-A11ED19912FD.jpeg" alt="Père et fils" loading="lazy" />
+			</div>
+
+			<!-- Couples -->
+			<div class="photo-item" data-category="couples">
+				<img src="images/portfolio/DSC00042.jpeg" alt="Couple au parc" loading="lazy" />
+			</div>
+			<div class="photo-item" data-category="couples">
+				<img src="images/portfolio/DSC00152.jpeg" alt="Couple enlacé" loading="lazy" />
+			</div>
+			<div class="photo-item" data-category="couples">
+				<img src="images/portfolio/DSC00834.jpeg" alt="Couple en forêt" loading="lazy" />
+			</div>
+
+			<!-- Enfants -->
+			<div class="photo-item" data-category="enfants">
+				<img src="images/portfolio/DSC00064.jpeg" alt="Enfants sur le banc" loading="lazy" />
+			</div>
+			<div class="photo-item" data-category="famille">
+				<img src="images/portfolio/DSC00741.jpeg" alt="Papa et bébé en forêt" loading="lazy" />
+			</div>
+			<div class="photo-item" data-category="famille">
+				<img src="images/portfolio/DSC00756.jpeg" alt="Maman et bébé en forêt" loading="lazy" />
+			</div>
+
+			<!-- Portraits -->
+			<div class="photo-item" data-category="portraits">
+				<img src="images/portfolio/DSC00379.jpeg" alt="Portrait homme" loading="lazy" />
+			</div>
+			<div class="photo-item" data-category="portraits">
+				<img src="images/portfolio/DSC00406.jpeg" alt="Portrait homme escalier" loading="lazy" />
+			</div>
+			<div class="photo-item" data-category="portraits">
+				<img src="images/portfolio/DSC00489.jpeg" alt="Portrait femme laverie" loading="lazy" />
+			</div>
+			<div class="photo-item" data-category="portraits">
+				<img src="images/portfolio/DSC00631.jpeg" alt="Portrait femme cadrage" loading="lazy" />
+			</div>
+			<div class="photo-item" data-category="portraits">
+				<img src="images/portfolio/30155520_Unknown.jpeg" alt="" loading="lazy" />
+			</div>
+			<div class="photo-item" data-category="portraits">
+				<img src="images/portfolio/30155968_Unknown.jpeg" alt="" loading="lazy" />
+			</div>
+			<div class="photo-item" data-category="enfants">
+				<img src="images/portfolio/DSC00774.jpeg" alt="" loading="lazy" />
+			</div>
+			<div class="photo-item" data-category="portraits">
+				<img src="images/portfolio/IMG_0087.jpeg" alt="" loading="lazy" />
+			</div>
+			<div class="photo-item" data-category="portraits">
+				<img src="images/portfolio/IMG_0088.jpeg" alt="" loading="lazy" />
+			</div>
+			<div class="photo-item" data-category="famille">
+				<img src="images/portfolio/IMG_2941.jpeg" alt="" loading="lazy" />
+			</div>
+
+		</div>
+	</section>
+
+	<!-- Lightbox -->
+	<div id="lightbox">
+		<button id="lightbox-close">&times;</button>
+		<button id="lightbox-prev">&#8249;</button>
+		<button id="lightbox-next">&#8250;</button>
+		<div id="lightbox-img-wrap">
+			<img id="lightbox-img" src="" alt="" />
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="footer-inner">
+			<p class="footer-brand"><em>Les yeux ouverts</em></p>
+			<div class="footer-links">
+				<a href="index.html">Accueil</a>
+				<span>·</span>
+				<a href="contact.html">Contact</a>
+			</div>
+		</div>
+	</footer>
+
+	<script src="assets/js/portfolio.js"></script>
+	<script src="assets/js/nav.js"></script>
+
+</body>
+</html>

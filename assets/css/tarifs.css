@@ -1,0 +1,510 @@
+@font-face {
+	font-family: 'Milk And Honey';
+	src: url('../fonts/MilkAndHoney.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* -----------------------------------------------
+   Reset & base
+----------------------------------------------- */
+
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Times New Roman', Times, serif;
+	background: #EDE8D0;
+	color: #4B4139;
+}
+
+/* -----------------------------------------------
+   Navigation
+----------------------------------------------- */
+
+#navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	align-items: center;
+	column-gap: 3rem;
+	padding: 1.4rem 3rem;
+	background: rgba(34, 54, 49, 0.92);
+}
+
+.nav-left {
+	justify-content: flex-end;
+}
+
+.nav-left,
+.nav-right {
+	display: flex;
+	list-style: none;
+	gap: 2rem;
+}
+
+.nav-left a,
+.nav-right a {
+	color: rgba(237, 232, 208, 0.75);
+	text-decoration: none;
+	font-size: 0.68rem;
+	letter-spacing: 0.14em;
+	font-weight: 400;
+	text-transform: uppercase;
+	transition: color 0.3s;
+}
+
+.nav-left a:hover,
+.nav-right a:hover,
+.nav-left a.active,
+.nav-right a.active {
+	color: #EDE8D0;
+}
+
+.nav-brand a {
+	text-transform: uppercase;
+	font-family: 'Milk And Honey', cursive;
+	font-size: 2rem;
+	color: #EDE8D0;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+/* -----------------------------------------------
+   Hero
+----------------------------------------------- */
+
+#tarifs-hero {
+	background-color: #223631;
+	height: 28vh;
+	min-height: 180px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding-top: 80px;
+}
+
+.tarifs-hero-label {
+	font-size: 0.65rem;
+	letter-spacing: 0.3em;
+	text-transform: uppercase;
+	color: rgba(237, 232, 208, 0.6);
+	margin-bottom: 0.8rem;
+}
+
+.tarifs-hero-title {
+	font-family: 'Milk And Honey', cursive;
+	font-size: 4.5rem;
+	font-weight: 400;
+	color: #EDE8D0;
+	line-height: 1;
+}
+
+/* -----------------------------------------------
+   Intro
+----------------------------------------------- */
+
+#tarifs-intro {
+	padding: 3.5rem 2rem 2rem;
+	text-align: center;
+}
+
+#tarifs-intro p {
+	font-size: 0.82rem;
+	font-weight: 300;
+	line-height: 1.9;
+	color: #666;
+}
+
+/* -----------------------------------------------
+   Cards
+----------------------------------------------- */
+
+#tarifs-cards {
+	padding: 1.5rem 3rem 5rem;
+}
+
+.cards-grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 1.5rem;
+	max-width: 1200px;
+	margin: 0 auto;
+	align-items: start;
+}
+
+/* Card base */
+
+.card {
+	background: #EDE8D0;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	box-shadow: 0 2px 20px rgba(75, 65, 57, 0.07);
+}
+
+/* Popular card */
+
+.card--popular {
+	background: #223631;
+	margin-top: -1rem;
+	box-shadow: 0 8px 40px rgba(34, 54, 49, 0.25);
+}
+
+.card-badge {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	background: #EDE8D0;
+	color: #223631;
+	font-size: 0.58rem;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	font-weight: 500;
+	padding: 0.3rem 0.7rem;
+	z-index: 2;
+}
+
+/* Card image */
+
+.card-img {
+	width: 100%;
+	height: 180px;
+	overflow: hidden;
+	flex-shrink: 0;
+}
+
+.card-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center top;
+	display: block;
+	transition: transform 0.5s ease;
+}
+
+.card:hover .card-img img {
+	transform: scale(1.04);
+}
+
+/* Card body */
+
+.card-body {
+	padding: 1.6rem 1.4rem 1.8rem;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.card-label {
+	font-size: 0.58rem;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: #aaa;
+	margin-bottom: 0.5rem;
+}
+
+.card--popular .card-label {
+	color: rgba(237, 232, 208, 0.55);
+}
+
+.card-title {
+	font-family: 'Milk And Honey', cursive;
+	font-size: 2rem;
+	font-weight: 400;
+	color: #4B4139;
+	line-height: 1.1;
+	margin-bottom: 0.5rem;
+}
+
+.card--popular .card-title {
+	color: #EDE8D0;
+}
+
+.card-price {
+	font-size: 1.4rem;
+	font-weight: 300;
+	color: #4B4139;
+	margin-bottom: 1.4rem;
+	letter-spacing: 0.02em;
+}
+
+.card--popular .card-price {
+	color: #EDE8D0;
+}
+
+.card-price {
+	margin-bottom: 0.3rem;
+}
+
+.card-devis {
+	font-size: 0.65rem;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	color: #888;
+	margin-bottom: 1.4rem;
+}
+
+.card--popular .card-devis {
+	color: rgba(237, 232, 208, 0.55);
+}
+
+/* Features list */
+
+.card-features {
+	list-style: none;
+	margin-bottom: 2rem;
+	flex: 1;
+}
+
+.card-features li {
+	font-size: 0.72rem;
+	font-weight: 300;
+	color: #666;
+	padding: 0.35rem 0;
+	border-bottom: 1px solid #f0ece6;
+	padding-left: 1.2rem;
+	position: relative;
+}
+
+.card-features li::before {
+	content: '✓';
+	position: absolute;
+	left: 0;
+	color: #223631;
+	font-size: 0.62rem;
+	top: 0.38rem;
+}
+
+.card--popular .card-features li {
+	color: rgba(237, 232, 208, 0.75);
+	border-bottom-color: rgba(237, 232, 208, 0.1);
+}
+
+.card--popular .card-features li::before {
+	color: rgba(237, 232, 208, 0.7);
+}
+
+/* CTA button */
+
+.card-btn {
+	display: block;
+	text-align: center;
+	padding: 0.7rem 1rem;
+	border: 1px solid rgba(34, 54, 49, 0.5);
+	color: #223631;
+	text-decoration: none;
+	font-size: 0.6rem;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	font-weight: 400;
+	transition: background 0.3s, color 0.3s, border-color 0.3s;
+	margin-top: auto;
+}
+
+.card-btn:hover {
+	background: #223631;
+	color: #EDE8D0;
+	border-color: #223631;
+}
+
+.card-btn--light {
+	border-color: rgba(237, 232, 208, 0.55);
+	color: #EDE8D0;
+}
+
+.card-btn--light:hover {
+	background: rgba(237, 232, 208, 0.15);
+	border-color: #EDE8D0;
+}
+
+/* Note */
+
+.tarifs-note {
+	text-align: center;
+	margin-top: 3rem;
+	font-size: 0.72rem;
+	font-weight: 300;
+	color: #aaa;
+	line-height: 1.8;
+}
+
+/* -----------------------------------------------
+   Footer
+----------------------------------------------- */
+
+#footer {
+	background: #4B4139;
+	padding: 2.5rem 2rem;
+	text-align: center;
+}
+
+.footer-inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.8rem;
+}
+
+.footer-brand {
+	text-transform: uppercase;
+	font-family: 'Milk And Honey', cursive;
+	font-size: 2rem;
+	color: #EDE8D0;
+}
+
+.footer-links {
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
+}
+
+.footer-links a {
+	color: rgba(237, 232, 208, 0.5);
+	text-decoration: none;
+	font-size: 0.6rem;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	transition: color 0.3s;
+}
+
+.footer-links a:hover {
+	color: rgba(237, 232, 208, 0.85);
+}
+
+.footer-links span {
+	color: rgba(237, 232, 208, 0.3);
+}
+
+/* -----------------------------------------------
+   Hamburger
+----------------------------------------------- */
+
+.hamburger {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	gap: 5px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0.4rem;
+	z-index: 200;
+}
+
+.hamburger span {
+	display: block;
+	width: 22px;
+	height: 1.5px;
+	background: #EDE8D0;
+	transition: transform 0.3s, opacity 0.3s;
+	transform-origin: center;
+}
+
+.hamburger.open span:nth-child(1) {
+	transform: translateY(6.5px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+	opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+	transform: translateY(-6.5px) rotate(-45deg);
+}
+
+#nav-mobile {
+	display: none;
+	position: fixed;
+	inset: 0;
+	background: rgba(34, 54, 49, 0.97);
+	z-index: 150;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2.5rem;
+}
+
+#nav-mobile.open {
+	display: flex;
+}
+
+#nav-mobile a {
+	color: rgba(237, 232, 208, 0.8);
+	text-decoration: none;
+	font-size: 1rem;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	font-weight: 400;
+	transition: color 0.2s;
+}
+
+#nav-mobile a:hover,
+#nav-mobile a.active {
+	color: #EDE8D0;
+}
+
+/* -----------------------------------------------
+   Responsive
+----------------------------------------------- */
+
+@media (max-width: 1024px) {
+	.cards-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.card--popular {
+		margin-top: 0;
+	}
+
+	#tarifs-cards {
+		padding: 1.5rem 2rem 4rem;
+	}
+}
+
+@media (max-width: 620px) {
+	.cards-grid {
+		grid-template-columns: 1fr;
+	}
+
+	#tarifs-cards {
+		padding: 1.5rem 1.2rem 4rem;
+	}
+
+	#navbar {
+		padding: 1rem 1.2rem;
+		column-gap: 0.5rem;
+	}
+
+	.nav-brand a {
+		font-size: 1.3rem;
+	}
+
+	.nav-left,
+	.nav-right {
+		display: none;
+	}
+
+	.hamburger {
+		display: flex;
+		grid-column: 3;
+		grid-row: 1;
+		justify-self: end;
+	}
+
+	.tarifs-hero-title {
+		font-size: 3.2rem;
+	}
+
+	#tarifs-intro p br {
+		display: none;
+	}
+}
