@@ -394,6 +394,38 @@ textarea:focus {
 }
 
 /* -----------------------------------------------
+   Success message
+----------------------------------------------- */
+
+#form-success {
+	display: none;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0.6rem;
+	padding: 2.5rem;
+	border: 1px solid #d8d4cc;
+}
+
+#form-success svg {
+	width: 28px;
+	height: 28px;
+	color: #223631;
+}
+
+#form-success p {
+	font-family: 'Milk And Honey', cursive;
+	font-size: 2rem;
+	color: #4B4139;
+	line-height: 1;
+}
+
+#form-success span {
+	font-size: 0.78rem;
+	font-weight: 300;
+	color: #888;
+}
+
+/* -----------------------------------------------
    Footer
 ----------------------------------------------- */
 
