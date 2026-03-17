@@ -80,6 +80,12 @@ body {
 	white-space: nowrap;
 }
 
+.nav-logo {
+	height: 80px;
+	width: auto;
+	display: block;
+}
+
 /* -----------------------------------------------
    Hero
 ----------------------------------------------- */
@@ -256,6 +262,10 @@ body {
 
 	.nav-brand a {
 		font-size: 1.3rem;
+	}
+
+	.nav-logo {
+		height: 60px;
 	}
 
 	.nav-left,

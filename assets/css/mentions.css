@@ -62,9 +62,7 @@ body {
 }
 
 .nav-left a:hover,
-.nav-right a:hover,
-.nav-left a.active,
-.nav-right a.active {
+.nav-right a:hover {
 	color: #EDE8D0;
 }
 
@@ -87,7 +85,7 @@ body {
    Hero
 ----------------------------------------------- */
 
-#faq-hero {
+#mentions-hero {
 	background-color: #223631;
 	height: 28vh;
 	min-height: 180px;
@@ -98,7 +96,7 @@ body {
 	padding-top: 80px;
 }
 
-.faq-hero-label {
+.mentions-hero-label {
 	font-size: 0.65rem;
 	letter-spacing: 0.3em;
 	text-transform: uppercase;
@@ -106,7 +104,7 @@ body {
 	margin-bottom: 0.8rem;
 }
 
-.faq-hero-title {
+.mentions-hero-title {
 	font-family: 'Milk And Honey', cursive;
 	font-size: 4.5rem;
 	font-weight: 400;
@@ -115,129 +113,49 @@ body {
 }
 
 /* -----------------------------------------------
-   FAQ content
+   Content
 ----------------------------------------------- */
 
-#faq-content {
-	max-width: 760px;
+#mentions-content {
+	max-width: 860px;
 	margin: 0 auto;
-	padding: 4rem 2rem 6rem;
+	padding: 5rem 2rem 7rem;
 }
 
-.faq-intro {
-	text-align: center;
-	font-size: 0.82rem;
-	font-weight: 300;
-	line-height: 1.9;
-	color: #777;
-	margin-bottom: 3rem;
+.mentions-section {
+	margin-bottom: 3.5rem;
 }
 
-/* -----------------------------------------------
-   Accordion
------------------------------------------------ */
-
-.accordion {
-	border-top: 1px solid #e4e0d8;
-}
-
-.accordion-item {
-	border-bottom: 1px solid #e4e0d8;
-}
-
-.accordion-btn {
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	background: none;
-	border: none;
-	cursor: pointer;
-	padding: 1.3rem 0;
-	text-align: left;
-	font-family: 'Times New Roman', Times, serif;
-	font-size: 0.82rem;
+.mentions-section h2 {
+	font-family: 'Milk And Honey', cursive;
+	font-size: 2.2rem;
 	font-weight: 400;
 	color: #4B4139;
-	gap: 1rem;
-	transition: color 0.2s;
-}
-
-.accordion-btn:hover {
-	color: #223631;
-}
-
-.accordion-icon {
-	flex-shrink: 0;
-	font-size: 1.3rem;
-	font-weight: 300;
-	color: #223631;
+	margin-bottom: 1.4rem;
 	line-height: 1;
-	transition: transform 0.3s;
 }
 
-.accordion-panel {
-	overflow: hidden;
-	max-height: 0;
-	transition: max-height 0.4s ease, padding 0.3s ease;
-}
-
-.accordion-item.open .accordion-panel {
-	max-height: 400px;
-	padding-bottom: 1.3rem;
-}
-
-.accordion-panel p {
-	font-size: 0.8rem;
+.mentions-section p {
+	font-size: 0.88rem;
 	font-weight: 300;
 	line-height: 1.9;
-	color: #666;
+	color: #555;
+	margin-bottom: 0.8rem;
 }
 
-/* -----------------------------------------------
-   CTA block
------------------------------------------------ */
-
-.faq-cta {
-	margin-top: 4rem;
-	background: #223631;
-	padding: 3.5rem 3rem;
-	text-align: center;
-}
-
-.faq-cta-title {
-	font-family: 'Milk And Honey', cursive;
-	font-size: 2.8rem;
-	font-weight: 400;
-	color: #EDE8D0;
-	margin-bottom: 1rem;
-	line-height: 1.2;
-}
-
-.faq-cta-text {
-	font-size: 0.78rem;
-	font-weight: 300;
-	color: rgba(237, 232, 208, 0.75);
-	margin-bottom: 2rem;
-}
-
-.faq-cta-btn {
-	display: inline-block;
-	padding: 0.7rem 2.2rem;
-	border: 1px solid rgba(237, 232, 208, 0.6);
-	color: rgba(237, 232, 208, 0.9);
+.mentions-section a {
+	color: #223631;
 	text-decoration: none;
-	font-size: 0.62rem;
-	letter-spacing: 0.2em;
-	text-transform: uppercase;
-	font-weight: 400;
-	transition: background 0.3s, border-color 0.3s, color 0.3s;
 }
 
-.faq-cta-btn:hover {
-	background: rgba(237, 232, 208, 0.12);
-	border-color: #EDE8D0;
-	color: #EDE8D0;
+.mentions-section a:hover {
+	text-decoration: underline;
+}
+
+.mentions-divider {
+	border: none;
+	border-top: 1px solid #d8d4cc;
+	margin-bottom: 3.5rem;
 }
 
 /* -----------------------------------------------
@@ -254,7 +172,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 0.5rem;
+	gap: 0.8rem;
 }
 
 .footer-brand {
@@ -268,14 +186,6 @@ body {
 	height: 60px;
 	width: auto;
 	display: block;
-}
-
-.footer-tagline {
-	font-size: 0.6rem;
-	letter-spacing: 0.2em;
-	text-transform: uppercase;
-	color: rgba(237, 232, 208, 0.4);
-	font-weight: 300;
 }
 
 .footer-links {
@@ -400,19 +310,11 @@ body {
 		justify-self: end;
 	}
 
-	.faq-hero-title {
-		font-size: 3.2rem;
+	.mentions-hero-title {
+		font-size: 3rem;
 	}
 
-	.faq-intro br {
-		display: none;
-	}
-
-	.faq-cta {
-		padding: 2.5rem 1.5rem;
-	}
-
-	.faq-cta-title {
-		font-size: 2rem;
+	#mentions-content {
+		padding: 3rem 1.4rem 5rem;
 	}
 }

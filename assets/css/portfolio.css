@@ -77,6 +77,12 @@ body {
 	white-space: nowrap;
 }
 
+.nav-logo {
+	height: 80px;
+	width: auto;
+	display: block;
+}
+
 /* -----------------------------------------------
    Hero
 ----------------------------------------------- */
@@ -278,6 +284,12 @@ body {
 	color: #EDE8D0;
 }
 
+.footer-logo {
+	height: 60px;
+	width: auto;
+	display: block;
+}
+
 .footer-links {
 	display: flex;
 	align-items: center;
@@ -395,6 +407,10 @@ body {
 
 	.nav-brand a {
 		font-size: 1.3rem;
+	}
+
+	.nav-logo {
+		height: 60px;
 	}
 
 	.nav-left,
