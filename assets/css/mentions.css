@@ -19,6 +19,9 @@ body {
 	font-family: 'Times New Roman', Times, serif;
 	background: #EDE8D0;
 	color: #4B4139;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 /* -----------------------------------------------
@@ -120,6 +123,7 @@ body {
 	max-width: 860px;
 	margin: 0 auto;
 	padding: 5rem 2rem 7rem;
+	flex: 1;
 }
 
 .mentions-section {
@@ -305,9 +309,10 @@ body {
 
 	.hamburger {
 		display: flex;
-		grid-column: 3;
-		grid-row: 1;
-		justify-self: end;
+		position: fixed;
+		top: 1rem;
+		right: 1.2rem;
+		z-index: 201;
 	}
 
 	.mentions-hero-title {

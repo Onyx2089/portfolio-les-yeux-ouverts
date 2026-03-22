@@ -19,6 +19,9 @@ body {
 	font-family: 'Times New Roman', Times, serif;
 	background: #EDE8D0;
 	color: #4B4139;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 /* -----------------------------------------------
@@ -157,6 +160,7 @@ body {
 #gallery {
 	padding: 1.5rem 14rem 5rem;
 	background: #EDE8D0;
+	flex: 1;
 }
 
 .masonry {
@@ -420,9 +424,10 @@ body {
 
 	.hamburger {
 		display: flex;
-		grid-column: 3;
-		grid-row: 1;
-		justify-self: end;
+		position: fixed;
+		top: 1rem;
+		right: 1.2rem;
+		z-index: 201;
 	}
 
 	.portfolio-hero-title {

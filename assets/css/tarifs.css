@@ -19,6 +19,9 @@ body {
 	font-family: 'Times New Roman', Times, serif;
 	background: #EDE8D0;
 	color: #4B4139;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 /* -----------------------------------------------
@@ -136,6 +139,7 @@ body {
 
 #tarifs-cards {
 	padding: 1.5rem 3rem 5rem;
+	flex: 1;
 }
 
 .cards-grid {
@@ -511,9 +515,10 @@ body {
 
 	.hamburger {
 		display: flex;
-		grid-column: 3;
-		grid-row: 1;
-		justify-self: end;
+		position: fixed;
+		top: 1rem;
+		right: 1.2rem;
+		z-index: 201;
 	}
 
 	.tarifs-hero-title {

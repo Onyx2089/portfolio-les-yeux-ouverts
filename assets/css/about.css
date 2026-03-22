@@ -403,9 +403,10 @@ body {
 
 	.hamburger {
 		display: flex;
-		grid-column: 3;
-		grid-row: 1;
-		justify-self: end;
+		position: fixed;
+		top: 1rem;
+		right: 1.2rem;
+		z-index: 201;
 	}
 
 	.about-stats {

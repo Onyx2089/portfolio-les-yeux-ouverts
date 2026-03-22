@@ -1,6 +1,9 @@
 const hamburger = document.getElementById('hamburger');
 const navMobile = document.getElementById('nav-mobile');
 
+// Sort le hamburger du navbar pour qu'il ait son propre contexte de superposition
+document.body.appendChild(hamburger);
+
 hamburger.addEventListener('click', () => {
 	hamburger.classList.toggle('open');
 	navMobile.classList.toggle('open');
